@@ -84,7 +84,7 @@ Contains information for each meal being served
 ## Feature Engineering
 
 - Created new features like:
- - Meal-center frequency
+ -- Meal-center frequency
  - Rolling averages by week
  - Demand variability metrics
  - Encoded categorical features like category, cuisine, and center_type
