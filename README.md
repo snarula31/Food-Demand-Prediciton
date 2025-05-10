@@ -67,8 +67,8 @@ Contains information for each meal being served
 
 ## Data Preprocessing
 
--No Missing/Null Values in any of the three datasets
--Merged datasets to get a unified view of meals and centers
+- No Missing/Null Values in any of the three datasets
+- Merged datasets to get a unified view of meals and centers
 
 ---
 
@@ -83,11 +83,11 @@ Contains information for each meal being served
 
 ## Feature Engineering
 
-- Created new features like:
- -- Meal-center frequency
- - Rolling averages by week
- - Demand variability metrics
- - Encoded categorical features like category, cuisine, and center_type
+- **Created new features like:**
+  - Meal-center frequency
+  - Rolling averages by week
+  - Demand variability metrics
+  - Encoded categorical features like category, cuisine, and center_type
 
 ---
 
