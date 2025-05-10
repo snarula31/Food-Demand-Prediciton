@@ -1,12 +1,12 @@
 # 🍽️ Food Demand Forecasting using Machine Learning
 
-## 📌 Project Overview
+## Project Overview
 
 This project aims to accurately forecast food demand for a meal delivery service by leveraging historical data and machine learning techniques. Predicting food demand is essential to optimize inventory, reduce food wastage, and streamline supply chain operations.
 
 ---
 
-## 🧠 Problem Statement
+## Problem Statement
 
 Meal delivery services often face challenges in demand forecasting due to fluctuating customer behavior and seasonal trends. The objective of this project is to build a robust machine learning model that can predict the number of meals required for a given center, meal type, and week.
 
@@ -55,40 +55,52 @@ Contains information for each meal being served
 
 ---
 
-## 🔧 Tools & Technologies Used
+## 🔧 Tools & Libraries Used
 
 - **Python**
   - `pandas`, `numpy` – Data preprocessing and manipulation
   - `matplotlib`, `seaborn` – Data visualization
   - `scikit-learn` – ML models and evaluation
-  - `xgboost`, `randomforest` – Advanced regression models
+  - `xgboost`, `catboost`, `light gbm`, `randomforest` – Advanced regression models
 
 ---
 
-## 📊 Exploratory Data Analysis
+## Data Preprocessing
+
+-No Missing/Null Values in any of the three datasets
+-Merged datasets to get a unified view of meals and centers
+
+---
+
+## Exploratory Data Analysis
 
 - Distribution of orders across weeks
 - Meal and center-level trends
-- Impact of promotional features
-- Price sensitivity analysis
+- Analyzed correlation and distribution of numerical features
+- Identified important trends, such as seasonality or high-volume centers
 
 ---
 
-## 🛠️ Feature Engineering
+## Feature Engineering
 
-- Merged datasets to enhance feature space
-- Created interaction terms (e.g., `center_meal_combo`)
-- Handled skewness and missing values
-- Encoded categorical variables
+- Created new features like:
+ - Meal-center frequency
+ - Rolling averages by week
+ - Demand variability metrics
+ - Encoded categorical features like category, cuisine, and center_type
 
 ---
 
-## 🤖 Model Building
+## Model Building
 
 Tested multiple regression models:
 - Linear Regression
+- Lasso Regression
+- Ridge Regression
 - Random Forest Regressor
 - XGBoost Regressor
+- Light GBM
+- Cat Boost
 
 **Evaluation Metric**: RMSE (Root Mean Squared Error)
 
@@ -96,7 +108,7 @@ Selected the model with the lowest RMSE on validation data.
 
 ---
 
-## ✅ Results
+## Results
 
 - Final model: **XGBoost Regressor**
 - Achieved significantly lower RMSE compared to baseline
@@ -104,5 +116,5 @@ Selected the model with the lowest RMSE on validation data.
 
 ---
 
-## 📁 Project Structure
-
+Competetion / Hackathon : https://datahack.analyticsvidhya.com/contest/genpact-machine-learning-hackathon-1/
+Leader Board Rank : 72/8009
