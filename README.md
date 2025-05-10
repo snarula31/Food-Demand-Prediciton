@@ -12,19 +12,46 @@ Meal delivery services often face challenges in demand forecasting due to fluctu
 
 ---
 
-## 📂 Dataset Description
+# Data Dictionary
 
-The dataset includes the following files:
-- `train.csv` – Historical demand data
-- `test.csv` – Data for prediction
-- `meal_info.csv` – Meal category and cuisine details
-- `fulfilment_center_info.csv` – Information about meal distribution centers
+The dataset consists of three individual datasheets, the first dataset contains the historical demand data for all centers, the second dataset contains the information of each fulfillment center and the third dataset contains the meal information.
 
-Key columns:
-- `center_id`, `meal_id`, `week`
-- `checkout_price`, `base_price`
-- `emailer_for_promotion`, `homepage_featured`
-- `num_orders` (target variable)
+Weekly Demand data (train.csv): \
+Contains the historical demand data for all centers. The Train dataset consists of 9 variables and records of 423727 unique orders. test.csv contains all the following features except the target variable. The Test dataset consists of 8 variables and records of 32573 unique orders.
+
+| Variable  | Definition |
+| ------------- | ------------- |
+| id 	| Unique ID |
+| week 	| Week No |
+| center_id | Unique ID for fulfillment center |
+| meal_id | Unique ID for Meal |
+| checkout_price | Final price including discount, taxes & delivery charges |
+| base_price | Base price of the meal |
+| emailer_for_promotion | Emailer sent for promotion of meal |
+| homepage_featured | Meal featured at homepage |
+| num_orders | (Target) Orders Count |
+
+\
+fulfilment_center_info.csv: \
+Contains information for each fulfilment center. The dataset consists of 5 variables and records of 77 unique fulfillment centers. 
+
+| Variable  | Definition |
+| ------------- | ------------- |
+| center_id |	Unique ID for fulfillment center |
+| city_code |	Unique code for city |
+| region_code |	Unique code for region |
+| center_type |	Anonymized center type |
+| op_area |	Area of operation (in km^2) |
+
+\
+meal_info.csv: \
+Contains information for each meal being served 
+
+| Variable  | Definition |
+| ------------- | ------------- |
+| meal_id |	Unique ID for the meal |
+| category |	Type of meal (beverages/snacks/soups….) |
+| cuisine |	Meal cuisine (Indian/Italian/…) |
 
 ---
 
